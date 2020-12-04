@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <link href="https://connect.sparcopen.org/static/css/sparcopen.2b0620bf5e9c.css" rel="stylesheet">
-  
+
 <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="https://sparcopen.org/favicon.ico">
 
-  
-       <!-- Required by Bootstrap v4 Alpha 4 -->
-      
 
-  
+       <!-- Required by Bootstrap v4 Alpha 4 -->
+
+
+
 <head>
-  
+
 <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
 <!--[if lt IE 9]>
 <script src="//static.cottagelabs.com/html5shim.min.js"></script>
@@ -29,12 +29,12 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-      
+
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
-       
-  
+
+
   <script>
   var api = 'https://dev.api.cottagelabs.com/service/bigdeal';
   noddy.service = 'nims';
@@ -49,10 +49,10 @@
   </script>
 </head>
 
-  <style> 
-      .container-fluid { margin-top: -1px; } 
+  <style>
+      .container-fluid { margin-top: -1px; }
 
-      ul { list-style-type: none; } 
+      ul { list-style-type: none; }
       a { color: #d92c35; }
       a:hover { color: #353535; text-decoration: none; }
       a:visited { color: #d92c35; text-decoration: none; }
@@ -63,15 +63,15 @@
       .alert-success h4 { color: #d92c35; font-size: 175%; padding-bottom: 8px; }
       .alert-success p { color: #ffffff; font-family: roboto, sans-serif; }
       .alert-success a { font-weight: medium; }
-      .errorlist { background-color: #eeeeee; color: red; } 
+      .errorlist { background-color: #eeeeee; color: red; }
       .details-abstract p {font-family: "PT Serif", serif}
       .details-profile ul {font-family: roboto, sans-serif; color: #353535; margin-left: -20px;}
       .details-profile p {font-family: roboto, sans-serif}
       .details-profile li::before {content: "▪"; color: #d92c35; padding-right: 4px;}
-      .form-row { margin-bottom: 40px; font-family: roboto, sans-serif; } 
-      .form-row label { display: inline; } 
-      .form-row ul { margin-top: 6px; } 
-      .form-row ul li label { font-weight: normal; } 
+      .form-row { margin-bottom: 40px; font-family: roboto, sans-serif; }
+      .form-row label { display: inline; }
+      .form-row ul { margin-top: 6px; }
+      .form-row ul li label { font-weight: normal; }
       .form-row textarea { width:70%; height: 6em; margin-top: 6px; }
       .form-row input[type=url] { width:70%; margin-top: 6px; }
       .form-row input[type=text],[type=number],[type=email] { width:30%; margin-top: 6px; }
@@ -80,7 +80,7 @@
       .form-link label label_tag { font-weight: normal; }
       .container h1 { font-weight: bold; }
       .profile-header { font-weight: 400; }
-      .red-line  { width: 100%; margin-bottom: 30px; border-top: 1px solid #d92c35; display:none; } 
+      .red-line  { width: 100%; margin-bottom: 30px; border-top: 1px solid #d92c35; display:none; }
       .sparc-member { border-radius: 3px; font-family: roboto, sans-serif; font-size: 20px; color: #ffffff; background-color: #d92c35; font-weight: bold; border: 2px solid #d92c35; font-size: 110%; padding: 2px;}
       .sparc-non-member { border-radius: 3px; font-family: roboto, sans-serif; font-size: 20px; color: #ffffff; background-color: #aaa; font-weight: bold; border: 2px solid #aaa; font-size: 110%; padding: 2px;}
       .submit-button  { margin-top: 20px; margin-bottom: 10px; padding-right: 25px; padding-left: 25px; padding-top: 10px; padding-bottom: 10px; border-radius: 2px; font-family: roboto, sans-serif; font-size: 20px; color: #ffffff; background-color: #d92c35; font-weight: bold; border: 2px solid #d92c35; text-transform: uppercase; }
@@ -103,7 +103,7 @@
       .filter-button:active:hover { background-color: #353535; border: 2px solid #353535; outline-width: 0px; }
       .filter-button:active:focus { outline-width: 0px; }
       .activity-button { border-radius: 2px; font-family: roboto, sans-serif; font-size: 16px; background-color: #ffffff; font-weight: 500; border: 2px solid #d92c35; text-transform: uppercase; width: 9em; text-align: center; margin-bottom: .5em; margin-right: .5em; padding: 0px; }
-      .activity-button a { color: #353535; display: inline-block; padding-right: 15px; padding-left: 15px; padding-top: 6px; padding-bottom: 6px; width: 100%; height: 100%; } 
+      .activity-button a { color: #353535; display: inline-block; padding-right: 15px; padding-left: 15px; padding-top: 6px; padding-bottom: 6px; width: 100%; height: 100%; }
       .activity-button:hover { background-color: #d92c35; }
       .activity-button:hover a { color: #ffffff; }
       .activity-button:focus { outline-width: 0px; }
@@ -113,54 +113,54 @@
       .search-results {font-family: roboto, sans-serif; margin-left: -35px;}
       .table-button { padding-top: 5px; border: outset 2px #d2d2d2; background-color: #e8e8e8; border-radius: 2px; color: #1f2222;}
       .table-button:hover { color: #d92c35; }
-      
-      table thead tr th { padding-left: 20px; padding-right: 20px; padding-bottom: 5px; } 
-      table tbody tr th label { display: block; text-align: left; } 
-      table tbody tr td { text-align: center; border: solid 1px #e8e8e8; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; font-size: 90%; } 
 
-      
+      table thead tr th { padding-left: 20px; padding-right: 20px; padding-bottom: 5px; }
+      table tbody tr th label { display: block; text-align: left; }
+      table tbody tr td { text-align: center; border: solid 1px #e8e8e8; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; font-size: 90%; }
+
+
       input[type="checkbox"]{ width: 20px; height: 20px; }
       .form-row ul li label input { display: inline; }
       .form-row div ul li label input { display: inline; }
 
-      
+
       .form-row ul li label { display: flex; line-height: 24px; }
       .form-row ul li label input { margin-right: 7px; }
 
-      
 
-      
-      
-      
-      
-      
 
-      
+
+
+
+
+
+
+
       .form-row ul li label[for=id_type_0] { display: none; }
       .form-row ul li label[for=id_home_0] { display: none; }
       .form-row ul li label[for=id_scope_0] { display: none; }
       .form-row ul li label[for=id_financial_sustainability_0] { display: none; }
       .form-row ul li label[for=id_incentives_conditions_0] { display: none; }
 
-      
+
       .form-row ul li label[for=id_policy_type_0] { display: none; }
       .form-row ul li label[for=id_scope_0] { display: none; }
       .form-row ul li label[for=id_policy_level_0] { display: none; }
       .form-row ul li label[for=id_policy_definition_0] { display: none; }
 
-      
+
       .form-row ul li label[for=id_scope_0] { display: none; }
 
-      
+
       .form-row ul li label[for=id_scope_0] { display: none; }
 
-      
-      
 
-      
-      
-      
-      
+
+
+
+
+
+
       details summary {font-family: roboto, sans-serif; font-size: 110%; }
       details {border: 1px solid #fcfcfc; border-radius: 5px; box-shadow: 0 1px 2px rgba(0, 0, 0, .5); margin: 0 0 .4em; padding: 1%; }
       details[open] {background: #fcfcfc; }
@@ -172,10 +172,10 @@
       details[open] summary:before {content: "-"; margin-top: -4px;}
       details[open] summary {margin-bottom: 20px;}
 
-      
+
       div#sparc-navbar-collapse-1 ul li { background: #1F2222; z-index: 9999; }
 
-      
+
       .page-topper {
           color: #fff;
           height: auto;
@@ -335,15 +335,15 @@
             </div>
         </div>
 </section>
-  
+
 <!-- TABLE CODE --->
 <div class="verticalgap" style="height:60px"></div>
 
 
     <div class="container">
-      
-       <!-- INTRO COPY --> 
-  
+
+       <!-- INTRO COPY -->
+
   <div class="row">
                         <div class="col col-md-10 col-md-offset-1">
                             <h1><span style="font-weight: 400;">Overview</span></h1>
@@ -353,22 +353,21 @@
 <p><span style="font-weight: 400;">Among the institutions that have cancelled big deals are the following.  This list is by no means comprehensive.  If you have others to add, or if you have information to enhance or clarify any of the stories below, please </span><span style="font-weight: 400;">contact us using the buttons at the bottom of this page</span><span style="font-weight: 400;">. You can view this data as a Google spreadsheet, and download it <a href="https://docs.google.com/spreadsheets/d/1brXHnANwLBCHYo5b79hF6vGF63fdOCSOSiPxCScf0hc/edit?usp=sharing">here</a>. The data is licenced <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC-0</a>.</span></p>
                         </div>
                     </div>
-      
+
     <div class="row">
       <div class="col-md-12" id="cancel">
 
         <p><input type="text" id="date" placeholder="search by year (e.g 2015)"></p>
-        
+
         <div class="sheet" sheetid="1xHQ4cw3zLndjlkT5cGrOmK5cS2Q4jUXN-fQVV_aQhaw"></div>
-        
+
         <p><br><br>Some institutions and consortia have canceled their Big Deals and subsequently come to new terms with the publisher on package subscriptions. If you have others to add to this list, please contact us using the buttons at the bottom of this page.</p>
-        
+
         <div class="sheet" sheetid="1xHQ4cw3zLndjlkT5cGrOmK5cS2Q4jUXN-fQVV_aQhaw" sheet="2"></div>
 
       </div>
     </div>
   </div>
-</div>
 
 <script type="text/javascript" src="https://bigdeal.test.cottagelabs.com//static/cancellations.js"></script>
 
@@ -376,7 +375,7 @@
 
 
 <!-- START OF FOOTER FROM https://connect.sparcopen.org/directory/ -->
-  
+
 <footer class="footer footer-home">
     <div class="footer-top">
 
@@ -434,8 +433,8 @@
         </div>
     </div>
 </footer>
-  
-  
-  
+
+
+
 </body>
 </html>
