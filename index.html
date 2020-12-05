@@ -1,245 +1,58 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
-<link href="https://connect.sparcopen.org/static/css/sparcopen.2b0620bf5e9c.css" rel="stylesheet">
-
-<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="https://sparcopen.org/favicon.ico">
-
-
-       <!-- Required by Bootstrap v4 Alpha 4 -->
-
-
-
-<head>
-
 <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
 <!--[if lt IE 9]>
 <script src="//static.cottagelabs.com/html5shim.min.js"></script>
 <![endif]-->
+<head>
 
+<!-- META INFO -->
+
+<title>Big Deal Cancellations</title>
+<meta charset="utf-8">
+<meta name="author" content="Cottage Labs">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html dir="ltr" lang="en">
+
+
+<!-- FAVICONS -->
+
+<link rel="icon" href="https://sparcopen.org/wp-content/uploads/2016/01/cropped-sparc-fav-ico-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://sparcopen.org/wp-content/uploads/2016/01/cropped-sparc-fav-ico-192x192.png" sizes="192x192" />
+<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="https://sparcopen.org/favicon.ico">
+
+<!-- STYLE -->
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://connect.sparcopen.org/static/css/sparcopen.2b0620bf5e9c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://sparcopen.org/wp-content/themes/wideeyecreative/css/magnific.css">
+<link rel="stylesheet" href="https://sparcopen.org/wp-content/themes/wideeyecreative/build/style.min.css">
+<link rel="stylesheet" href="https://sparcopen.org/wp-content/themes/wideeyecreative/style.css">
+
+<!-- SCRIPTS -->
+<!-- ACTUAL SCRIPT POWERING TABLE IS BELOW, AS IT MUST BE AFTER DIV THAT STARTS IT -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
 <script src="https://bigdeal.test.cottagelabs.com//static/bundled_a4fa9ea14f4c16107e6c5f579a9b385a.min.js"></script>
 <script src="https://sparcopen.org/wp-content/themes/wideeyecreative/js/scripts.js"></script>
 
+<!-- CL SCRIPT CALLS THE API -->
 
-<link rel="stylesheet" href="https://bigdeal.test.cottagelabs.com/static/bundled_79457c3444c3b16be72f4ed799689f95.min.css">
+<script>
+var api = 'https://dev.api.cottagelabs.com/service/bigdeal';
+noddy.service = 'nims';
+noddy.debug = true;
+noddy.api = 'https://dev.api.cottagelabs.com';
 
-  <meta charset="utf-8">
-  <title>Big deal demo</title>
-  <meta name="author" content="Cottage Labs">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
-
-
-  <script>
-  var api = 'https://dev.api.cottagelabs.com/service/bigdeal';
-  noddy.service = 'nims';
-  noddy.debug = true;
-  noddy.api = 'https://dev.api.cottagelabs.com';
-
-  jQuery(document).ready(function() {
-
-    $('body').css('min-height',$(window).height()+'px');
-
+jQuery(document).ready(function() {
+  $('body').css('min-height',$(window).height()+'px');
   });
-  </script>
+</script>
+
 </head>
-
-  <style>
-      .container-fluid { margin-top: -1px; }
-
-      ul { list-style-type: none; }
-      a { color: #d92c35; }
-      a:hover { color: #353535; text-decoration: none; }
-      a:visited { color: #d92c35; text-decoration: none; }
-      a:focus { color: #353535; text-decoration: none; }
-      a:active { color: #353535; text-decoration: none; }
-      .alert { padding-top: 40px; padding-left: 30px; padding-right: 25px; padding-bottom: 20px; margin-bottom: 30px; color: #ffffff; font-family: roboto, sans-serif; }
-      .alert-success { background-color: #1f2222; color: #ffffff; }
-      .alert-success h4 { color: #d92c35; font-size: 175%; padding-bottom: 8px; }
-      .alert-success p { color: #ffffff; font-family: roboto, sans-serif; }
-      .alert-success a { font-weight: medium; }
-      .errorlist { background-color: #eeeeee; color: red; }
-      .details-abstract p {font-family: "PT Serif", serif}
-      .details-profile ul {font-family: roboto, sans-serif; color: #353535; margin-left: -20px;}
-      .details-profile p {font-family: roboto, sans-serif}
-      .details-profile li::before {content: "▪"; color: #d92c35; padding-right: 4px;}
-      .form-row { margin-bottom: 40px; font-family: roboto, sans-serif; }
-      .form-row label { display: inline; }
-      .form-row ul { margin-top: 6px; }
-      .form-row ul li label { font-weight: normal; }
-      .form-row textarea { width:70%; height: 6em; margin-top: 6px; }
-      .form-row input[type=url] { width:70%; margin-top: 6px; }
-      .form-row input[type=text],[type=number],[type=email] { width:30%; margin-top: 6px; }
-      #id_private_comments { width: 70%; height: 3em; }
-      .form-text p { font-family: roboto, sans-serif; }
-      .form-link label label_tag { font-weight: normal; }
-      .container h1 { font-weight: bold; }
-      .profile-header { font-weight: 400; }
-      .red-line  { width: 100%; margin-bottom: 30px; border-top: 1px solid #d92c35; display:none; }
-      .sparc-member { border-radius: 3px; font-family: roboto, sans-serif; font-size: 20px; color: #ffffff; background-color: #d92c35; font-weight: bold; border: 2px solid #d92c35; font-size: 110%; padding: 2px;}
-      .sparc-non-member { border-radius: 3px; font-family: roboto, sans-serif; font-size: 20px; color: #ffffff; background-color: #aaa; font-weight: bold; border: 2px solid #aaa; font-size: 110%; padding: 2px;}
-      .submit-button  { margin-top: 20px; margin-bottom: 10px; padding-right: 25px; padding-left: 25px; padding-top: 10px; padding-bottom: 10px; border-radius: 2px; font-family: roboto, sans-serif; font-size: 20px; color: #ffffff; background-color: #d92c35; font-weight: bold; border: 2px solid #d92c35; text-transform: uppercase; }
-      .submit-button:hover { background-color: #353535; border: 2px solid #353535; outline-width: 0px; }
-      .submit-button:focus { outline-width: 0px; }
-      .submit-button:active { outline-width: 0px; }
-      .submit-button:active:hover { background-color: #353535; border: 2px solid #353535; outline-width: 0px; }
-      .submit-button:active:focus { outline-width: 0px; }
-      .red-button { color: #ffffff; background-color: #d92c35; border-radius: 2px; border: solid 2px #d92c35; font-family: roboto, sans-serif; }
-      .red-button:hover { background-color: #353535; border: solid 2px #353535; outline-width: 0px; }
-      .red-button:focus { outline-width: 0px; }
-      .red-button:active { outline-width: 0px; }
-      .red-button:active:hover { background-color: #353535; border: 2px solid #353535; outline-width: 0px; }
-      .red-button:active:focus { outline-width: 0px; }
-      .filter-button { padding-right: 15px; padding-left: 15px; padding-top: 6px; padding-bottom: 6px; border-radius: 2px; font-family: roboto, sans-serif; font-size: 17px; color: #ffffff; background-color: #d92c35; font-weight: bold; border: 2px solid #d92c35; text-transform: uppercase;  }
-      .filter-button a { color: #ffffff; }
-      .filter-button:hover { background-color: #353535; border: 2px solid #353535; outline-width: 0px; }
-      .filter-button:focus { outline-width: 0px; }
-      .filter-button:active { outline-width: 0px; }
-      .filter-button:active:hover { background-color: #353535; border: 2px solid #353535; outline-width: 0px; }
-      .filter-button:active:focus { outline-width: 0px; }
-      .activity-button { border-radius: 2px; font-family: roboto, sans-serif; font-size: 16px; background-color: #ffffff; font-weight: 500; border: 2px solid #d92c35; text-transform: uppercase; width: 9em; text-align: center; margin-bottom: .5em; margin-right: .5em; padding: 0px; }
-      .activity-button a { color: #353535; display: inline-block; padding-right: 15px; padding-left: 15px; padding-top: 6px; padding-bottom: 6px; width: 100%; height: 100%; }
-      .activity-button:hover { background-color: #d92c35; }
-      .activity-button:hover a { color: #ffffff; }
-      .activity-button:focus { outline-width: 0px; }
-      .activity-button:active { outline-width: 0px; }
-      .activity-button:active:hover { background-color: #353535; border: 2px solid #353535; outline-width: 0px; }
-      .activity-button:active:focus { outline-width: 0px; }
-      .search-results {font-family: roboto, sans-serif; margin-left: -35px;}
-      .table-button { padding-top: 5px; border: outset 2px #d2d2d2; background-color: #e8e8e8; border-radius: 2px; color: #1f2222;}
-      .table-button:hover { color: #d92c35; }
-
-      table thead tr th { padding-left: 20px; padding-right: 20px; padding-bottom: 5px; }
-      table tbody tr th label { display: block; text-align: left; }
-      table tbody tr td { text-align: center; border: solid 1px #e8e8e8; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; font-size: 90%; }
-
-
-      input[type="checkbox"]{ width: 20px; height: 20px; }
-      .form-row ul li label input { display: inline; }
-      .form-row div ul li label input { display: inline; }
-
-
-      .form-row ul li label { display: flex; line-height: 24px; }
-      .form-row ul li label input { margin-right: 7px; }
-
-
-
-
-
-
-
-
-
-
-      .form-row ul li label[for=id_type_0] { display: none; }
-      .form-row ul li label[for=id_home_0] { display: none; }
-      .form-row ul li label[for=id_scope_0] { display: none; }
-      .form-row ul li label[for=id_financial_sustainability_0] { display: none; }
-      .form-row ul li label[for=id_incentives_conditions_0] { display: none; }
-
-
-      .form-row ul li label[for=id_policy_type_0] { display: none; }
-      .form-row ul li label[for=id_scope_0] { display: none; }
-      .form-row ul li label[for=id_policy_level_0] { display: none; }
-      .form-row ul li label[for=id_policy_definition_0] { display: none; }
-
-
-      .form-row ul li label[for=id_scope_0] { display: none; }
-
-
-      .form-row ul li label[for=id_scope_0] { display: none; }
-
-
-
-
-
-
-
-
-      details summary {font-family: roboto, sans-serif; font-size: 110%; }
-      details {border: 1px solid #fcfcfc; border-radius: 5px; box-shadow: 0 1px 2px rgba(0, 0, 0, .5); margin: 0 0 .4em; padding: 1%; }
-      details[open] {background: #fcfcfc; }
-      summary {background: #fcfcfc; border-radius: 5px; cursor: pointer; margin: -1%; padding: 8px 0; position: relative; font-weight: bold; overflow: hidden; }
-      summary:hover, details[open] summary {background: #f6f6f6;}
-      summary::-webkit-details-marker {display: none}
-      summary:before{border-radius: 5px; content: "+"; color: #363636; display: block; float: left; font-size: 1.2em; font-weight: bold; margin: -2px 10px 0 10px; padding: 0; text-align: center; width: 20px;}
-      summary:after{content: "(click/tap to expand)"; color: #dddddd; display: block; float: right; margin-right: 20px; }
-      details[open] summary:before {content: "-"; margin-top: -4px;}
-      details[open] summary {margin-bottom: 20px;}
-
-
-      div#sparc-navbar-collapse-1 ul li { background: #1F2222; z-index: 9999; }
-
-
-      .page-topper {
-          color: #fff;
-          height: auto;
-          padding-top: 65px;
-          padding-bottom: 35px;
-          background-color: #da2c35;
-          background: #da2c35 url(https://sparcopen.org/wp-content/themes/wideeyecreative/images/red_pattern.png) repeat;
-      }
-
-      .page-topper h6 {
-          font-size: 13px; font-weight: bold; font-family: roboto, sans-serif; text-transform: uppercase;
-      }
-
-      .page-topper h1 {
-          font-weight: 300 !important;
-      }
-
-      .page-topper a {
-          color: #ffffff; font-size: 14px; font-weight: normal; font-family: roboto, sans-serif;
-      }
-
-      .page-topper li {
-          border: 2px solid #fff;
-          list-style: none;
-          display: inline-block;
-          width: 19%;
-          text-align: center;
-          margin-left: 2px;
-          margin-right: 2px;
-          margin-top: 40px;
-          overflow: hidden;
-          border-radius: 2px 2px 2px 2px;
-      }
-
-      .page-topper li a {
-          text-transform: uppercase;
-          font: normal normal 500 normal 12px / 15px roboto, sans-serif;
-          padding-top: 16px;
-          padding-bottom: 15px;
-          width: 100%;
-          display: inline-block;
-      }
-
-      .page-topper li a {
-          color: inherit;
-      }
-
-      .page-topper li:hover, .page-topper li a:hover {
-          background: #fff;
-          color: #353535;
-          transition: .15s ease-in-out;
-          -moz-transition: .15s ease-in-out;
-          -webkit-transition: .15s ease-in-out;
-      }
-
-    @media only screen and (max-width: 600px) {
-      .page-topper li {
-        display: none;
-      }
-    }
-
-    </style>
 
 <body>
 
@@ -250,58 +63,47 @@
         <div class="navbar-header">
             <a class="brand-img" href="https://sparcopen.org/">
                 <svg version="1.1" id="Layer_8" x="0px" y="0px" width="175px" height="58px" viewBox="0 0 390 80" enable-background="new 0 0 390 80">
-    <!-- SPARC -->
-    <g>
-       <path fill="#FFFFFF" d="M33,34c-9-2.52-14.16-4.47-14.16-10,0-4.1,3.54-6.89,10-6.89A20.36,20.36,0,0,1,44.21,24.7l0.1,0.11a2.7,2.7,0,0,0,
-       2.06.95,2.67,2.67,0,0,0,1.49-.45l0.26-.19,0,0,0.24-.18,5.4-4.1,0.73-.56a2.79,2.79,0,0,0,.76-1.91,2.72,2.72,0,0,
-       0-.47-1.54h0l-0.24-.31c-5-6.37-13.06-11.75-25.65-11.75C14.11,4.72,4,12.45,4,25.31,4,39.75,16.9,42.92,29.2,46.37c9,2.52,
-       14,4.75,14,10s-5,7.92-12,7.92A20.23,20.23,0,0,1,14,55.1l0,0-0.08-.12-0.07-.1a2.94,2.94,0,0,0-2.39-1.21,3,3,0,0,
-       0-1.38.33h0l-0.28.17L3.87,57.65l-0.25.15-0.45.26A2.78,2.78,0,0,0,2,60.31a2.72,2.72,0,0,0,.29,1.24L2.59,62c5.37,8.46,14.3,
-       14.3,27.83,14.3,19.19,0,27.58-9.88,27.58-21C58,41.06,45.13,37.24,33,34Z"></path>
-       <path fill="#FFFFFF" d="M93.65,6H71.36a2.78,2.78,0,0,0-2.78,2.78V72.19A2.78,2.78,0,0,0,71.36,75h9.54a2.78,2.78,0,0,0,2.77-2.64V50.47h9.78c13.79,
-       0,28.32-3.82,28.32-22.36C121.78,9.94,108.37,6,93.65,6ZM94,38.73H83.68V21.2h0a2.78,2.78,0,0,1,2.78-2.78H94c9.5,0,12.95,3.64,12.95,
-       10.06C107,35.1,103.43,38.73,94,38.73Z"></path>
-       <path fill="#FFFFFF" d="M157.49,7.73a2,2,0,0,0-.1-0.28,2.78,2.78,0,0,0-2.57-1.7h-10.5a2.78,2.78,0,0,0-2.66,2L117.94,75h12a2.79,2.79,0,0,0,
-       2.66-2l4.64-13.42h23.48l4.37,13.13h0l0.23,0.66A2.77,2.77,0,0,0,167.81,75H181.2ZM141,48.6l8.1-23.48h0.18l7.92,23.48H141Z"></path>
-       <path fill="#FFFFFF" d="M227.86,47c9.22-2.79,14.35-8.76,14.35-19.66C242.21,12.08,232,6,215.09,6H192a2.79,2.79,0,0,0-2.78,2.78V72.19A2.79,2.79,0,0,0,192,
-       75h9.35a2.78,2.78,0,0,0,2.78-2.78V49h8.76l13.46,24.37,0.2,0.38h0a2.75,2.75,0,0,0,2.3,1.23h14.4Zm-13.42-9.78H204.1v-16a2.78,2.78,0,0,1,
-       2.78-2.78h7.56c8.76,0,12.95,2.51,12.95,9.32C227.39,34.72,223.2,37.24,214.44,37.24Z"></path>
-       <path fill="#FFFFFF" d="M307.38,52.08l-0.11,0-8.56-1.9h0l-0.43-.1a2.18,2.18,0,0,0-.37,0,2.77,2.77,0,0,0-2.58,1.75h0c0,0.14-.08.27-0.13,0.41h0c-2.48,
-       7.71-6.46,11.88-13.77,11.88-10.43,0-16.21-9.14-16.21-23.67,0-14.26,5.59-23.11,16-23.11,7.18,0,10.63,4.24,12.88,10.72a2.78,2.78,0,0,0,
-       2.66,2,2.06,2.06,0,0,0,.5-0.06h0.05l0.28-.07,0.13,0,8.69-2.54,0.36-.1a2.84,2.84,0,0,0,1.74-3.49l-0.08-.26,0,0c-3.47-10.83-11.14-18.64-27.1-18.64-17.42,
-       0-31.3,11.74-31.3,35.68,0,24.32,13.32,35.87,31.3,35.87,16,0,24.19-8.22,28-20.37l0,0,0.13-.44v0a3.09,3.09,0,0,0,.06-0.56A2.81,2.81,0,0,0,307.38,52.08Z"></path>
-    </g>
-    <!-- Asterisk -->
-    <g>
-       <path fill-rule="evenodd" class="animate" clip-rule="evenodd" d="M330.51,70.17c-0.29,0-.36-0.29-0.22-0.87l16.13-27.69-32,.22a0.58,0.58,0,0,1-.65-0.65V39.86a0.75,0.75,0,0,1,.65-0.65l32,0.22L330.29,
-       11.74c-0.29-.29-0.22-0.58.22-0.87l1.09-.65c0.14-.29.44-0.22,0.87,0.22l15.91,27.9,15.91-27.9c0.29-.44.58-0.51,0.87-0.22l1.09,0.65a0.72,0.72,0,0,
-       1,.22.87L350.35,39.43l32-.22a0.58,0.58,0,0,1,.65.65v1.31a0.58,0.58,0,0,1-.65.65l-32-.22,16.13,27.69a0.63,0.63,0,0,1-.22.87l-1.09.65a0.63,0.63,
-       0,0,1-.87-0.22L348.39,42.7,332.47,70.6c-0.29.44-.58,0.51-0.87,0.22Z" style="fill: #d92e35"></path>
-       <path fill-rule="evenodd" class="animate" clip-rule="evenodd" d="M332,76a5.42,5.42,0,0,1-3.21-1.06l-0.32-.19a5.21,5.21,0,0,1-2.07-1.6,5.66,5.66,0,0,1-.9-5.08l0.17-.68,12.07-20.72-23.28.16a5.54,5.54,
-       0,0,1-5.69-5.65V39.07l0.25-.76a5.7,5.7,0,0,1,5.4-4.09l23.31,0.16L326.15,14.56a5.42,5.42,0,0,1-1-3.7,5.61,5.61,0,0,1,2.6-4.16l0.74-.45A5.22,5.22,
-       0,0,1,331.85,5,5.79,5.79,0,0,1,336,6.9l0.48,0.48,11.9,20.87L360.14,7.66A5.61,5.61,0,0,1,364.83,5,5.42,5.42,0,0,1,368,6.11l1.33,0.8,0.43,0.43A5.7,
-       5.7,0,0,1,371,13.94l-0.17.32L359.08,34.37l23.28-.16A5.54,5.54,0,0,1,388,39.86v1.31a5.53,5.53,0,0,1-5.65,5.65l-23.31-.16,12,20.56,0.17,0.5a5.59,
-       5.59,0,0,1-2.48,6.78l-1.48.89-0.53.17A5.66,5.66,0,0,1,359.92,73L348.39,52.79l-11.76,20.6A5.61,5.61,0,0,1,332,76Z" style="fill: #d92e35"></path>
-    </g>
-</svg>
-
+                  <!-- SPARC -->
+                  <g>
+                     <path fill="#FFFFFF" d="M33,34c-9-2.52-14.16-4.47-14.16-10,0-4.1,3.54-6.89,10-6.89A20.36,20.36,0,0,1,44.21,24.7l0.1,0.11a2.7,2.7,0,0,0,
+                     2.06.95,2.67,2.67,0,0,0,1.49-.45l0.26-.19,0,0,0.24-.18,5.4-4.1,0.73-.56a2.79,2.79,0,0,0,.76-1.91,2.72,2.72,0,0,
+                     0-.47-1.54h0l-0.24-.31c-5-6.37-13.06-11.75-25.65-11.75C14.11,4.72,4,12.45,4,25.31,4,39.75,16.9,42.92,29.2,46.37c9,2.52,
+                     14,4.75,14,10s-5,7.92-12,7.92A20.23,20.23,0,0,1,14,55.1l0,0-0.08-.12-0.07-.1a2.94,2.94,0,0,0-2.39-1.21,3,3,0,0,
+                     0-1.38.33h0l-0.28.17L3.87,57.65l-0.25.15-0.45.26A2.78,2.78,0,0,0,2,60.31a2.72,2.72,0,0,0,.29,1.24L2.59,62c5.37,8.46,14.3,
+                     14.3,27.83,14.3,19.19,0,27.58-9.88,27.58-21C58,41.06,45.13,37.24,33,34Z"></path>
+                     <path fill="#FFFFFF" d="M93.65,6H71.36a2.78,2.78,0,0,0-2.78,2.78V72.19A2.78,2.78,0,0,0,71.36,75h9.54a2.78,2.78,0,0,0,2.77-2.64V50.47h9.78c13.79,
+                     0,28.32-3.82,28.32-22.36C121.78,9.94,108.37,6,93.65,6ZM94,38.73H83.68V21.2h0a2.78,2.78,0,0,1,2.78-2.78H94c9.5,0,12.95,3.64,12.95,
+                     10.06C107,35.1,103.43,38.73,94,38.73Z"></path>
+                     <path fill="#FFFFFF" d="M157.49,7.73a2,2,0,0,0-.1-0.28,2.78,2.78,0,0,0-2.57-1.7h-10.5a2.78,2.78,0,0,0-2.66,2L117.94,75h12a2.79,2.79,0,0,0,
+                     2.66-2l4.64-13.42h23.48l4.37,13.13h0l0.23,0.66A2.77,2.77,0,0,0,167.81,75H181.2ZM141,48.6l8.1-23.48h0.18l7.92,23.48H141Z"></path>
+                     <path fill="#FFFFFF" d="M227.86,47c9.22-2.79,14.35-8.76,14.35-19.66C242.21,12.08,232,6,215.09,6H192a2.79,2.79,0,0,0-2.78,2.78V72.19A2.79,2.79,0,0,0,192,
+                     75h9.35a2.78,2.78,0,0,0,2.78-2.78V49h8.76l13.46,24.37,0.2,0.38h0a2.75,2.75,0,0,0,2.3,1.23h14.4Zm-13.42-9.78H204.1v-16a2.78,2.78,0,0,1,
+                     2.78-2.78h7.56c8.76,0,12.95,2.51,12.95,9.32C227.39,34.72,223.2,37.24,214.44,37.24Z"></path>
+                     <path fill="#FFFFFF" d="M307.38,52.08l-0.11,0-8.56-1.9h0l-0.43-.1a2.18,2.18,0,0,0-.37,0,2.77,2.77,0,0,0-2.58,1.75h0c0,0.14-.08.27-0.13,0.41h0c-2.48,
+                     7.71-6.46,11.88-13.77,11.88-10.43,0-16.21-9.14-16.21-23.67,0-14.26,5.59-23.11,16-23.11,7.18,0,10.63,4.24,12.88,10.72a2.78,2.78,0,0,0,
+                     2.66,2,2.06,2.06,0,0,0,.5-0.06h0.05l0.28-.07,0.13,0,8.69-2.54,0.36-.1a2.84,2.84,0,0,0,1.74-3.49l-0.08-.26,0,0c-3.47-10.83-11.14-18.64-27.1-18.64-17.42,
+                     0-31.3,11.74-31.3,35.68,0,24.32,13.32,35.87,31.3,35.87,16,0,24.19-8.22,28-20.37l0,0,0.13-.44v0a3.09,3.09,0,0,0,.06-0.56A2.81,2.81,0,0,0,307.38,52.08Z"></path>
+                  </g>
+                  <!-- Asterisk -->
+                  <g>
+                     <path fill-rule="evenodd" class="animate" clip-rule="evenodd" d="M330.51,70.17c-0.29,0-.36-0.29-0.22-0.87l16.13-27.69-32,.22a0.58,0.58,0,0,1-.65-0.65V39.86a0.75,0.75,0,0,1,.65-0.65l32,0.22L330.29,
+                     11.74c-0.29-.29-0.22-0.58.22-0.87l1.09-.65c0.14-.29.44-0.22,0.87,0.22l15.91,27.9,15.91-27.9c0.29-.44.58-0.51,0.87-0.22l1.09,0.65a0.72,0.72,0,0,
+                     1,.22.87L350.35,39.43l32-.22a0.58,0.58,0,0,1,.65.65v1.31a0.58,0.58,0,0,1-.65.65l-32-.22,16.13,27.69a0.63,0.63,0,0,1-.22.87l-1.09.65a0.63,0.63,
+                     0,0,1-.87-0.22L348.39,42.7,332.47,70.6c-0.29.44-.58,0.51-0.87,0.22Z" style="fill: #d92e35"></path>
+                     <path fill-rule="evenodd" class="animate" clip-rule="evenodd" d="M332,76a5.42,5.42,0,0,1-3.21-1.06l-0.32-.19a5.21,5.21,0,0,1-2.07-1.6,5.66,5.66,0,0,1-.9-5.08l0.17-.68,12.07-20.72-23.28.16a5.54,5.54,
+                     0,0,1-5.69-5.65V39.07l0.25-.76a5.7,5.7,0,0,1,5.4-4.09l23.31,0.16L326.15,14.56a5.42,5.42,0,0,1-1-3.7,5.61,5.61,0,0,1,2.6-4.16l0.74-.45A5.22,5.22,
+                     0,0,1,331.85,5,5.79,5.79,0,0,1,336,6.9l0.48,0.48,11.9,20.87L360.14,7.66A5.61,5.61,0,0,1,364.83,5,5.42,5.42,0,0,1,368,6.11l1.33,0.8,0.43,0.43A5.7,
+                     5.7,0,0,1,371,13.94l-0.17.32L359.08,34.37l23.28-.16A5.54,5.54,0,0,1,388,39.86v1.31a5.53,5.53,0,0,1-5.65,5.65l-23.31-.16,12,20.56,0.17,0.5a5.59,
+                     5.59,0,0,1-2.48,6.78l-1.48.89-0.53.17A5.66,5.66,0,0,1,359.92,73L348.39,52.79l-11.76,20.6A5.61,5.61,0,0,1,332,76Z" style="fill: #d92e35"></path>
+                  </g>
+              </svg>
             </a>
-        </div>
-
-        <div class="navbar-header" id="navbar-header-right">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sparc-navbar-collapse-1" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
         </div>
         <div id="sparc-navbar-collapse-1" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-                <li> <a href="https://sparcopen.org/who-we-are/">Who We Are</a> </li>
-                <li> <a href="https://sparcopen.org/what-sparc-does/">What We Do</a> </li>
-                <li> <a href="https://sparcopen.org/why-open-matters/">Why It Matters</a> </li>
-                <li> <a href="https://sparcopen.org/become-a-member/">Become a Member</a> </li>
+                <li>
+                  <a href="https://sparcopen.org/our-work/big-deal-cancellation-tracking/"><b>Back to main page</b></a>
+                </li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -309,131 +111,26 @@
 
 <!-- END OF NAV -->
 
- <section class="page-topper" align="center">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <h6>SPARC Projects</h6>
-                            <h1>Connect OER</h1>
-                            <span class="feed-links">
-                                <a href="https://sparcopen.org/open-education/">Open Education</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="row sub-nav">
-                        <div class="col-md-12">
-                            <ul id="menu-connect-oer" class="menu">
-                                <li class="menu-item"><a href="https://sparcopen.org/our-work/connect-oer/">About</a></li>
-                                <li class="menu-item" style="background-color: white; color: #535353;"><a href="https://connect.sparcopen.org/directory/">Directory</a></li>
-                                <li class="menu-item"><a href="http://sparcopen.org/our-work/connect-oer/reports">Reports</a></li>
-                                <li class="menu-item"><a href="https://sparcopen.org/our-work/connect-oer/faq">FAQ</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
-
 <!-- TABLE CODE --->
 
 <div class="verticalgap" style="height:60px"></div>
 
-
-    <div class="container">
-
-       <!-- INTRO COPY -->
-
-  <div class="row">
-                        <div class="col col-md-10 col-md-offset-1">
-                            <h1><span style="font-weight: 400;">Overview</span></h1>
-<p><span style="font-weight: 400;">Large publishers have marketed bundles of journals at a discount off of aggregated list price since the late 1990’s.  The value proposition for publishers is a guaranteed revenue stream at a high overall dollar value. The perceived benefit for the institutions has been access to a large volume of journal titles, at a lower per-title price than ala carte purchasing would afford. Over time, however, the actual value of these “big deals” has grown less clear. Publishers have often raised the price of the packages by 5-15%, far outpacing library budgets. This has been justified, in part, by the addition of a growing number of specialized journal titles, launched in quick succession. Libraries have found a growing chunk of their budgets allocated to servicing these big deals, as well as their ability to curate resources and build collections most appropriate for their communities severely hampered.</span></p>
-<p>What was once a no-fuss way to get a significant collection of journals at a discount off of list price has devolved into a restrictive agreement that limits financial and strategic flexibility.  The “big deal” has often been compared to a cable or satellite TV package, an apt analogy insofar as the customer cannot choose to pass on content that is of no interest, with initial price breaks quickly giving way to locked-in increases.  Much like the millions of consumers who have chosen to “cut the cord”, a growing number of libraries are electing to critically appraise these big deals by assessing their collections, the value for money they are receiving from these packages, and how they might more strategically spend their finite collections resources.</p>
-<h1><span style="font-weight: 400;">Recent Negotiations &amp; Cancellations</span></h1>
-<p><span style="font-weight: 400;">Among the institutions that have cancelled big deals are the following.  This list is by no means comprehensive.  If you have others to add, or if you have information to enhance or clarify any of the stories below, please </span><span style="font-weight: 400;">contact us using the buttons at the bottom of this page</span><span style="font-weight: 400;">. You can view this data as a Google spreadsheet, and download it <a href="https://docs.google.com/spreadsheets/d/1brXHnANwLBCHYo5b79hF6vGF63fdOCSOSiPxCScf0hc/edit?usp=sharing">here</a>. The data is licenced <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC-0</a>.</span></p>
-                        </div>
-                    </div>
-
+  <div class="container">
     <div class="row">
-      <div class="col-md-12" id="cancel">
+      <div class="col-md-12">
 
         <p><input type="text" id="date" placeholder="search by year (e.g 2015)"></p>
 
         <div class="sheet" sheetid="1xHQ4cw3zLndjlkT5cGrOmK5cS2Q4jUXN-fQVV_aQhaw"></div>
 
-        <p><br><br>Some institutions and consortia have canceled their Big Deals and subsequently come to new terms with the publisher on package subscriptions. If you have others to add to this list, please contact us using the buttons at the bottom of this page.</p>
-
-        <div class="sheet" sheetid="1xHQ4cw3zLndjlkT5cGrOmK5cS2Q4jUXN-fQVV_aQhaw" sheet="2"></div>
+        <script type="text/javascript" src="https://bigdeal.test.cottagelabs.com/static/cancellations.js">
+        </script>
 
       </div>
     </div>
   </div>
 
-<script type="text/javascript" src="https://bigdeal.test.cottagelabs.com//static/cancellations.js"></script>
-
 <div class="verticalgap" style="height:60px"></div>
-
-<!-- START OF FOOTER FROM https://connect.sparcopen.org/directory/ -->
-
-<footer class="footer footer-home">
-    <div class="footer-top">
-        <div class="footer-logo text-center">
-            <svg version="1.1" id="Layer_8" x="0px" y="0px" width="175px" height="58px" viewBox="0 0 390 80" enable-background="new 0 0 390 80">
-    <!-- SPARC -->
-    <g>
-       <path fill="#FFFFFF" d="M33,34c-9-2.52-14.16-4.47-14.16-10,0-4.1,3.54-6.89,10-6.89A20.36,20.36,0,0,1,44.21,24.7l0.1,0.11a2.7,2.7,0,0,0,
-       2.06.95,2.67,2.67,0,0,0,1.49-.45l0.26-.19,0,0,0.24-.18,5.4-4.1,0.73-.56a2.79,2.79,0,0,0,.76-1.91,2.72,2.72,0,0,
-       0-.47-1.54h0l-0.24-.31c-5-6.37-13.06-11.75-25.65-11.75C14.11,4.72,4,12.45,4,25.31,4,39.75,16.9,42.92,29.2,46.37c9,2.52,
-       14,4.75,14,10s-5,7.92-12,7.92A20.23,20.23,0,0,1,14,55.1l0,0-0.08-.12-0.07-.1a2.94,2.94,0,0,0-2.39-1.21,3,3,0,0,
-       0-1.38.33h0l-0.28.17L3.87,57.65l-0.25.15-0.45.26A2.78,2.78,0,0,0,2,60.31a2.72,2.72,0,0,0,.29,1.24L2.59,62c5.37,8.46,14.3,
-       14.3,27.83,14.3,19.19,0,27.58-9.88,27.58-21C58,41.06,45.13,37.24,33,34Z"></path>
-       <path fill="#FFFFFF" d="M93.65,6H71.36a2.78,2.78,0,0,0-2.78,2.78V72.19A2.78,2.78,0,0,0,71.36,75h9.54a2.78,2.78,0,0,0,2.77-2.64V50.47h9.78c13.79,
-       0,28.32-3.82,28.32-22.36C121.78,9.94,108.37,6,93.65,6ZM94,38.73H83.68V21.2h0a2.78,2.78,0,0,1,2.78-2.78H94c9.5,0,12.95,3.64,12.95,
-       10.06C107,35.1,103.43,38.73,94,38.73Z"></path>
-       <path fill="#FFFFFF" d="M157.49,7.73a2,2,0,0,0-.1-0.28,2.78,2.78,0,0,0-2.57-1.7h-10.5a2.78,2.78,0,0,0-2.66,2L117.94,75h12a2.79,2.79,0,0,0,
-       2.66-2l4.64-13.42h23.48l4.37,13.13h0l0.23,0.66A2.77,2.77,0,0,0,167.81,75H181.2ZM141,48.6l8.1-23.48h0.18l7.92,23.48H141Z"></path>
-       <path fill="#FFFFFF" d="M227.86,47c9.22-2.79,14.35-8.76,14.35-19.66C242.21,12.08,232,6,215.09,6H192a2.79,2.79,0,0,0-2.78,2.78V72.19A2.79,2.79,0,0,0,192,
-       75h9.35a2.78,2.78,0,0,0,2.78-2.78V49h8.76l13.46,24.37,0.2,0.38h0a2.75,2.75,0,0,0,2.3,1.23h14.4Zm-13.42-9.78H204.1v-16a2.78,2.78,0,0,1,
-       2.78-2.78h7.56c8.76,0,12.95,2.51,12.95,9.32C227.39,34.72,223.2,37.24,214.44,37.24Z"></path>
-       <path fill="#FFFFFF" d="M307.38,52.08l-0.11,0-8.56-1.9h0l-0.43-.1a2.18,2.18,0,0,0-.37,0,2.77,2.77,0,0,0-2.58,1.75h0c0,0.14-.08.27-0.13,0.41h0c-2.48,
-       7.71-6.46,11.88-13.77,11.88-10.43,0-16.21-9.14-16.21-23.67,0-14.26,5.59-23.11,16-23.11,7.18,0,10.63,4.24,12.88,10.72a2.78,2.78,0,0,0,
-       2.66,2,2.06,2.06,0,0,0,.5-0.06h0.05l0.28-.07,0.13,0,8.69-2.54,0.36-.1a2.84,2.84,0,0,0,1.74-3.49l-0.08-.26,0,0c-3.47-10.83-11.14-18.64-27.1-18.64-17.42,
-       0-31.3,11.74-31.3,35.68,0,24.32,13.32,35.87,31.3,35.87,16,0,24.19-8.22,28-20.37l0,0,0.13-.44v0a3.09,3.09,0,0,0,.06-0.56A2.81,2.81,0,0,0,307.38,52.08Z"></path>
-    </g>
-    <!-- Asterisk -->
-    <g>
-       <path fill-rule="evenodd" class="animate" clip-rule="evenodd" d="M330.51,70.17c-0.29,0-.36-0.29-0.22-0.87l16.13-27.69-32,.22a0.58,0.58,0,0,1-.65-0.65V39.86a0.75,0.75,0,0,1,.65-0.65l32,0.22L330.29,
-       11.74c-0.29-.29-0.22-0.58.22-0.87l1.09-.65c0.14-.29.44-0.22,0.87,0.22l15.91,27.9,15.91-27.9c0.29-.44.58-0.51,0.87-0.22l1.09,0.65a0.72,0.72,0,0,
-       1,.22.87L350.35,39.43l32-.22a0.58,0.58,0,0,1,.65.65v1.31a0.58,0.58,0,0,1-.65.65l-32-.22,16.13,27.69a0.63,0.63,0,0,1-.22.87l-1.09.65a0.63,0.63,
-       0,0,1-.87-0.22L348.39,42.7,332.47,70.6c-0.29.44-.58,0.51-0.87,0.22Z" style="fill: #d92e35"></path>
-       <path fill-rule="evenodd" class="animate" clip-rule="evenodd" d="M332,76a5.42,5.42,0,0,1-3.21-1.06l-0.32-.19a5.21,5.21,0,0,1-2.07-1.6,5.66,5.66,0,0,1-.9-5.08l0.17-.68,12.07-20.72-23.28.16a5.54,5.54,
-       0,0,1-5.69-5.65V39.07l0.25-.76a5.7,5.7,0,0,1,5.4-4.09l23.31,0.16L326.15,14.56a5.42,5.42,0,0,1-1-3.7,5.61,5.61,0,0,1,2.6-4.16l0.74-.45A5.22,5.22,
-       0,0,1,331.85,5,5.79,5.79,0,0,1,336,6.9l0.48,0.48,11.9,20.87L360.14,7.66A5.61,5.61,0,0,1,364.83,5,5.42,5.42,0,0,1,368,6.11l1.33,0.8,0.43,0.43A5.7,
-       5.7,0,0,1,371,13.94l-0.17.32L359.08,34.37l23.28-.16A5.54,5.54,0,0,1,388,39.86v1.31a5.53,5.53,0,0,1-5.65,5.65l-23.31-.16,12,20.56,0.17,0.5a5.59,
-       5.59,0,0,1-2.48,6.78l-1.48.89-0.53.17A5.66,5.66,0,0,1,359.92,73L348.39,52.79l-11.76,20.6A5.61,5.61,0,0,1,332,76Z" style="fill: #d92e35"></path>
-    </g>
-</svg>
-
-        </div>
-    </div>
-
-    <div class="footer-black">
-        <div class="container text-center">
-            <div class="col-xs-12">
-                <p>
-                    <a href="https://sparcopen.org/privacy-policy/">Privacy Policy</a>   |
-                    <a href="https://sparcopen.org/contact/">Contact Us</a>  |
-                    <span style="margin-left: 15px">© 2007 - 2020 SPARC,
-                        <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" style="margin: 0">subject to a CC0 waiver</a>
-                    </span>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
 
 </body>
 </html>
