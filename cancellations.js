@@ -11,7 +11,7 @@ $('body').on('keyup', '#date', dateFilter);
 
 var cancellations = function(opts) {
   if (opts === undefined) opts = {};
-  if (opts.api === undefined) opts.api = 'https://dev.api.cottagelabs.com/use/google/sheets/';
+  if (opts.api === undefined) opts.api = 'https://api.cottagelabs.com/use/google/sheets/';
 
   $('.sheet').each(function() {
     var sid = $(this).attr('sheetid');
