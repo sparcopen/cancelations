@@ -36,7 +36,7 @@ var cancellations = function(opts) {
             for ( var k in keys) {
               var dk = data[r][keys[k]];
               if (dk === undefined) { dk === ''; }
-              if (keys[k] === 'institution' && data[r].href) dk = '<a href="' + data[r].href + '">' + dk + '</a>'
+              if (keys[k] === 'institution' && data[r].source) dk = '<a href="' + data[r].source + '">' + dk + '</a>'
               tbl += '<td>' + dk + '</td>';
             }
             tbl += '</tr>';
