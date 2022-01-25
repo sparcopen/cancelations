@@ -24,7 +24,7 @@ var cancellations = function(opts) {
           var tbl = '<table width=100%><thead> \
 <th><b>Institution/<br />Consortium</b></th> \
 <th><b>Date</b></th> \
-<th><b>Region</b></th> \
+<th><b>Country</b></th> \
 <th><b>Publisher(s)</b></th> \
 <th><b>Strategic Considerations</b></th> \
 <th><b>Outcome</b></th> \
@@ -32,7 +32,7 @@ var cancellations = function(opts) {
           tbl += '</thead><tbody sheetid=' + this.obj.attr('sheetid') + '>';
           for ( var r in data ) {
             tbl += '<tr>';
-            var keys = ['institution', 'date', 'region', 'publisher', 'considerations', 'outcome', 'savings'];
+            var keys = ['institution', 'date', 'country', 'publisher', 'considerations', 'outcome', 'savings'];
             for ( var k in keys) {
               var dk = data[r][keys[k]];
               if (dk === undefined) { dk === ''; }
