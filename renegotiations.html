@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html dir="ltr" lang="en">
 <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
 <!--[if lt IE 9]>
 <script src="//static.cottagelabs.com/html5shim.min.js"></script>
@@ -13,7 +14,6 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<html dir="ltr" lang="en">
 
 
 <!-- FAVICONS -->
@@ -38,11 +38,6 @@
 <!-- CL SCRIPT CALLS THE API -->
 
 <script>
-var api = 'https://api.cottagelabs.com/service/bigdeal';
-noddy.service = 'nims';
-noddy.debug = true;
-noddy.api = 'https://api.cottagelabs.com';
-
 jQuery(document).ready(function() {
   $('body').css('min-height',$(window).height()+'px');
   });
@@ -116,11 +111,8 @@ jQuery(document).ready(function() {
       <div class="col-md-12">
 
         <p><input type="text" id="date" placeholder="search by year (e.g 2015)"></p>
-
-        <div class="sheet" sheetid="12jdf7obHpTIxPtSwdBaBFX7vUmzs9zy9zfdivIGr6N0"></div>
-
-        <script type="text/javascript" src="/cancellations.js">
-        </script>
+        <div id="sheet" data-sheetid="12jdf7obHpTIxPtSwdBaBFX7vUmzs9zy9zfdivIGr6N0" data-tab="Sheet1" data-key="AIzaSyDg55_P-qXmTd7Wj033LKwm9yc66DR56ew"></div>
+        <script type="text/javascript" src="/cancellations.js"></script>
 
       </div>
     </div>
