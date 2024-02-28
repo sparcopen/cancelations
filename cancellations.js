@@ -21,7 +21,7 @@ cancellations.getData = function(params) {
   let url = `https://sheets.googleapis.com/v4/spreadsheets/${sid}/values/${tid}?key=${key}`;
   $.ajax({
     url: url,
-    headers: {"referrer": cancellations.REFERRER},
+    headers: {"referer": cancellations.REFERRER},
     dataType: "jsonp",
     success: function (data) {
       let keys = data.values.shift();
