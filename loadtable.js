@@ -1,18 +1,18 @@
-cancellations = {};
+loadtable = {};
 
-cancellations.REFERRER = "https://bigdeal.sparcopen.org"
-cancellations.KEYS = ['institution', 'date', 'country', 'publisher', 'considerations', 'outcome', 'savings'];
-cancellations.KEYMAP = {}
-cancellations.DATA = {}
+loadtable.REFERRER = "https://bigdeal.sparcopen.org"
+loadtable.KEYS = ['institution', 'date', 'country', 'publisher', 'considerations', 'outcome', 'savings'];
+loadtable.KEYMAP = {}
+loadtable.DATA = {}
 
-cancellations.init = function() {
-  cancellations.getData({
-    callback: cancellations.renderData
+loadtable.init = function() {
+  loadtable.getData({
+    callback: loadtable.renderData
   });
-  $('#date').on('keyup', cancellations.dateFilter);
+  $('#date').on('keyup', loadtable.dateFilter);
 }
 
-cancellations.getData = function(params) {
+loadtable.getData = function(params) {
   let container = $("#sheet");
   let sid = container.attr("data-sheetid");
   let tid = container.attr("data-tab");
@@ -21,22 +21,22 @@ cancellations.getData = function(params) {
   let url = `https://sheets.googleapis.com/v4/spreadsheets/${sid}/values/${tid}?key=${key}`;
   $.ajax({
     url: url,
-    headers: {"referer": cancellations.REFERRER},
+    headers: {"referer": loadtable.REFERRER},
     dataType: "jsonp",
     success: function (data) {
       let keys = data.values.shift();
-      for (let k of cancellations.KEYS) {
+      for (let k of loadtable.KEYS) {
         let i = keys.indexOf(k);
-        cancellations.KEYMAP[k] = i;
+        loadtable.KEYMAP[k] = i;
       }
 
-      cancellations.DATA = data.values;
+      loadtable.DATA = data.values;
       params.callback();
     }
   });
 }
 
-cancellations.renderData = function() {
+loadtable.renderData = function() {
   let tbl = `<table style="width:100%"><thead>
       <th><b>Institution/<br />Consortium</b></th>
       <th><b>Date</b></th>
@@ -48,10 +48,10 @@ cancellations.renderData = function() {
     </thead>
     <tbody>`;
 
-  for ( let r of cancellations.DATA ) {
+  for ( let r of loadtable.DATA ) {
     tbl += '<tr>';
-    for ( let k of cancellations.KEYS) {
-      let dk = r[cancellations.KEYMAP[k]];
+    for ( let k of loadtable.KEYS) {
+      let dk = r[loadtable.KEYMAP[k]];
       if (dk === undefined) { dk === ''; }
       if (k === 'institution' && r.source) {
         dk = `<a href="${r.source}">${dk}</a>`
@@ -64,7 +64,7 @@ cancellations.renderData = function() {
   $("#sheet").html(tbl);
 }
 
-cancellations.dateFilter = function() {
+loadtable.dateFilter = function() {
   $('#sheet tbody').children('tr').each(function() {
     let date = $("#date").val().trim();
     if (!date.length || date.length !== 4 || $(this).html().indexOf('>' + date + '<') !== -1) {
@@ -75,4 +75,4 @@ cancellations.dateFilter = function() {
   });
 }
 
-cancellations.init();
+loadtable.init();
