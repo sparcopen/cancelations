@@ -1,0 +1,1 @@
+Microsite for https://bigdeal.sparcopen.org/cancellations and https://bigdeal.sparcopen.org/renegotiations loaded via Google Sheets API
